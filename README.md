@@ -7,15 +7,9 @@ Este projeto implementa um sistema de transferência de arquivos utilizando **Be
 - **Java 8 ou superior**
 
 ## Como Compilar
-
-1. Crie uma pasta para os arquivos compilados:
-   ```bash
-   mkdir bin
-   ```
-2. Compile os arquivos:
-   ```bash
-   javac -d bin src/*.java
-   ```
+```bash
+javac -d bin src/*.java
+```
 
 ## Como Executar
 
