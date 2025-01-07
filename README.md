@@ -1,44 +1,46 @@
-# Projeto de Transferência de Arquivos - Berkeley Sockets
 
-Este projeto implementa um sistema de transferência de arquivos utilizando **Berkeley Sockets** em Java. Ele é composto por um servidor (`Daemon`) e um cliente (`Remcp`) que permitem envio e recebimento de arquivos de forma confiável, com suporte a retomada de transferências.
 
-## Requisitos
+# File Transfer Project - Berkeley Sockets
 
-- **Java 8 ou superior**
+This project implements a file transfer system using **Berkeley Sockets** in Java. It consists of a server (`Daemon`) and a client (`Remcp`) that enable reliable file sending and receiving, with support for transfer resumption.
 
-## Como Compilar
+## Requirements
+
+- **Java 8 or higher**
+
+## How to Compile
 ```bash
 javac -d bin src/*.java
 ```
 
-## Como Executar
+## How to Run
 
-### Iniciar o Servidor
+### Start the Server
 ```bash
 java -cp bin Daemon
 ```
 
-### Usar o Cliente
-- **Enviar um arquivo para o servidor**:
+### Use the Client
+- **Send a file to the server**:
   ```bash
   java -cp bin Remcp <local_file_path> <server_ip>:<server_file_path>
   ```
-  Exemplo:
+  Example:
   ```bash
-  java -cp bin Remcp test/foto.jpeg localhost:/tmp/foto.jpeg
+  java -cp bin Remcp test/photo.jpeg localhost:/tmp/photo.jpeg
   ```
 
-- **Receber um arquivo do servidor**:
+- **Receive a file from the server**:
   ```bash
   java -cp bin Remcp <server_ip>:<server_file_path> <local_file_path>
   ```
-  Exemplo:
+  Example:
   ```bash
-  java -cp bin Remcp localhost:/tmp/foto.jpeg test/received_foto.jpeg
+  java -cp bin Remcp localhost:/tmp/photo.jpeg test/received_photo.jpeg
   ```
 
-## Funcionalidades
+## Features
 
-- **Envio e Recebimento de Arquivos**: Envia e recebe arquivos entre cliente e servidor.
-- **Retomada de Transferências**: Continua transferências interrompidas do ponto em que pararam.
-- **Progresso da Transferência**: Mostra o progresso durante o recebimento de arquivos no cliente.
+- **File Sending and Receiving**: Transfers files between the client and server.
+- **Transfer Resumption**: Resumes interrupted transfers from where they left off.
+- **Transfer Progress**: Displays progress while receiving files on the client.
